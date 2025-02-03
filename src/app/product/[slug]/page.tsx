@@ -9,13 +9,16 @@ import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
-// Make sure the async fetching happens inside the component logic
 interface ProductPageProps {
-  params: { slug: string };
+  params: { slug: string };  // The 'params' are automatically injected by Next.js.
 }
 
-async function fetchProductData(slug: string) {
-  return await client.fetch(
+// Server component (since we're fetching data directly)
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { slug } = params;
+
+  // Fetch product data from Sanity
+  const product: Product = await client.fetch(
     groq`*[_type == "product" && slug.current == $slug][0]{
       id,
       name,
@@ -25,13 +28,6 @@ async function fetchProductData(slug: string) {
     }`,
     { slug }
   );
-}
-
-export default function ProductPage({ params }: ProductPageProps) {
-  const { slug } = params;
-
-  // Fetch the product data inside the component's body
-  const product = fetchProductData(slug);
 
   if (!product) {
     return (
