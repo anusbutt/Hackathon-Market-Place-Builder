@@ -15,7 +15,7 @@ import Link from "next/link";
 import { addToCart } from "../actions/actions";
 import { Button } from "@/components/ui/button";
 
-const featureProducts = () => {
+const FeatureProducts = () => {
   const [product, setProduct] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -123,4 +123,4 @@ const featureProducts = () => {
   </div>  );
 };
 
-export default featureProducts;
+export default FeatureProducts;
