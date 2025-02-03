@@ -9,12 +9,8 @@ import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
-interface ProductPageProps {
-  params: { slug: string };  // The 'params' are automatically injected by Next.js.
-}
-
 // Server component (since we're fetching data directly)
-export default async function ProductPage({ params }: ProductPageProps) {
+export default async function ProductPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   // Fetch product data from Sanity
