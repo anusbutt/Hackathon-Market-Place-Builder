@@ -9,9 +9,17 @@ import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
-// Directly typing params in the function signature
-export default async function ProductPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+// Define the type for params
+interface ProductPageParams {
+  slug: string;
+}
+
+interface ProductPageProps {
+  params: ProductPageParams;
+}
+
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { slug } = await params;  // Await params to resolve
 
   // Fetch product data from Sanity
   const product: Product = await client.fetch(
