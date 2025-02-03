@@ -9,7 +9,7 @@ import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
-// Server component (since we're fetching data directly)
+// Directly typing params in the function signature
 export default async function ProductPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
