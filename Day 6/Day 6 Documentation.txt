@@ -1,0 +1,41 @@
+Documentation: Hackathon Marketplace Website - Day 6 (Next.js & Sanity)
+This report details the progress made on Day 6 of development, focusing on environment variables, comprehensive test cases, a README file, GitHub repository structure, and the persistent Vercel deployment issue.
+
+1. Environment Variables:
+
+Implementation: I've moved all sensitive information, like API keys and secret tokens, into environment variables. This is a crucial security step, preventing these credentials from being exposed in the code.
+Configuration: I've set up the necessary environment variables for both my local development environment and the production environment (which will be used when I deploy to Vercel).
+2. Comprehensive Test Cases:
+
+Expansion: I've added more test cases to make sure all parts of the website work correctly under different conditions. This includes testing user interactions, data validation, and how the site handles errors. (Include a table here with the new test cases and their results, similar to the Day 5 table).
+Automation: (If applicable) I've also set up automated testing to make testing faster and more reliable. I used [mention testing framework, e.g., Jest, Cypress] for this.
+3. README File:
+
+Creation: I've created a detailed README file for the project. This file explains everything about the project, including:
+What the project is about
+How to set it up
+How to use it
+The technologies I used
+How others can contribute
+How environment variables work
+How the project is organized
+4. GitHub Repository Structure:
+
+Organization: I've organized the project on GitHub to make it easy to understand and work with. This means:
+Clear folders for different parts of the website (like components, pages, and API routes).
+Consistent naming for files and folders.
+A well-organized public folder for static assets (like images).
+A separate folder for tests.
+Day 1-6 Hierarchy: The GitHub repository shows how the project has evolved from Day 1 to Day 6. You can see the progress through the commits and branches (if I used them).
+5. Vercel Deployment Issue (Ongoing):
+
+Status: I'm still working on getting the site deployed to Vercel. It works perfectly on my computer, but I'm running into an error when Vercel tries to build it.
+Further Investigation: I'm looking into the following to fix this:
+Carefully checking the Vercel build logs for error messages.
+Comparing my local setup with the Vercel environment.
+Trying to reproduce the error with a simplified version of the website.
+Asking for help from the Vercel community.
+Alternative Deployment Options: Just in case, I'm also looking at other deployment platforms like Netlify or AWS Amplify.
+Note for Giaic Teachers:
+
+I've completed all the core features of the website, and they're working well in my local development environment.  The main thing I'm working on now is fixing the Vercel deployment issue.  I've added more test cases, set up environment variables, written a detailed README, and organized the project on GitHub.  I'm exploring other deployment options as a backup. I'm happy to show you the working website on my computer anytime. I understand the deadline and am doing my best to get the site online as quickly as possible.
