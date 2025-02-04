@@ -1,0 +1,19 @@
+Documentation: Furnish Hackathon Marketplace Website - Day 4 (Next.js & Sanity)
+This report summarizes Day 4 development: search, dynamic products, add to cart, and top categories using Next.js and Sanity.
+
+1. Search:
+
+Implementation: Next.js search bar. Sanity GROQ query for product search. Dynamic result display.
+Challenges: Optimizing GROQ query.
+2. Dynamic Products:
+
+Implementation: Sanity product schema. GROQ query for fetching products. Dynamic rendering with JSX and next/image.
+Challenges: Handling Sanity image URLs.
+3. Add to Cart:
+
+Implementation: localStorage for cart data. Add to cart button with event handling. Cart update logic. Optional: React Context for cart state.
+Challenges: Updating cart display.
+4. Top Categories:
+
+Implementation: Sanity category schema. GROQ query for fetching categories. Dynamic rendering with JSX. Navigation to category pages.
+Challenges: Determining "top" categories.
