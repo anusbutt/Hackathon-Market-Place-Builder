@@ -19,8 +19,9 @@ interface ProductPageProps {
 }
 
 // This is now an async component
-export default async function ProductPage({ params }: { params: ProductPageParams }) {
-  const { slug } = params;
+export default async function ProductPage({ params }: { params: Promise<ProductPageParams> }) {
+  const resolvedParams = await params; // Await the params
+  const { slug } = resolvedParams; // Now you can safely access slug
 
   // Fetch product data from Sanity
   const product: Product = await client.fetch(
