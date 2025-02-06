@@ -8,7 +8,7 @@ export interface Product {
     oldPrice: number;  // If you're going to use it for calculations
     originalPrice: number; // Same as oldPrice, ensure it's a number
     sale: any;
-    id: string;
+    _id: string;
     name: string;
     price: number; // price is a number, so this is fine
     type: "product";
