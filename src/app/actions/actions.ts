@@ -4,7 +4,7 @@ import { Product } from "../../../types/products"
 export const addToCart = (product : Product) => {
     const cart : Product[] = JSON.parse(localStorage.getItem('cart') || '[]')
 
-    const existingProductIndex = cart.findIndex(item => item.id === product.id)
+    const existingProductIndex = cart.findIndex(item => item._id === product._id)
 
     if(existingProductIndex > -1) {
         cart[existingProductIndex].inventory += 1
@@ -20,13 +20,13 @@ export const addToCart = (product : Product) => {
 
 export const removeFromCart = (productId : string) => {
     let cart : Product[] = JSON.parse(localStorage.getItem('cart') || '[]')
-    cart = cart.filter(item => item.id !== productId)
+    cart = cart.filter(item => item._id !== productId)
     localStorage.setItem('cart', JSON.stringify(cart))
 }
 
 export const updateCartQuantity = (productId :string, quantity : number) => {
     const cart : Product[] = JSON.parse(localStorage.getItem('cart') || '[]')
-    const productIndex = cart.findIndex(item => item.id === productId)
+    const productIndex = cart.findIndex(item => item._id === productId)
 
     if(productIndex > -1) {
         cart[productIndex].inventory = quantity;

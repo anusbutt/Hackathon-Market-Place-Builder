@@ -55,14 +55,14 @@ const CartPage = () => {
   };
 
   const handleIncrement = (id: string) => {
-    const product = cartItems.find((item) => item.id === id);
+    const product = cartItems.find((item) => item._id === id);
     if (product) {
       handleQuantityChange(id, product.inventory + 1); // Increment quantity
     }
   };
 
   const handleDecrement = (id: string) => {
-    const product = cartItems.find((item) => item.id === id);
+    const product = cartItems.find((item) => item._id === id);
     if (product && product.inventory > 1) {
       handleQuantityChange(id, product.inventory - 1); // Decrement quantity
     }
@@ -114,7 +114,7 @@ const CartPage = () => {
           {cartItems.length > 0 ? (
             cartItems.map((item) => (
               <div
-                key={item.id}
+                key={item._id}
                 className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Product Image */}
@@ -142,7 +142,7 @@ const CartPage = () => {
                 <div className="flex items-center justify-between mt-4">
                   <div className="flex items-center space-x-4">
                     <button
-                      onClick={() => handleDecrement(item.id)}
+                      onClick={() => handleDecrement(item._id)}
                       className="px-3 py-1 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200"
                     >
                       -
@@ -151,7 +151,7 @@ const CartPage = () => {
                       {item.inventory}
                     </span>
                     <button
-                      onClick={() => handleIncrement(item.id)}
+                      onClick={() => handleIncrement(item._id)}
                       className="px-3 py-1 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200"
                     >
                       +
@@ -160,7 +160,7 @@ const CartPage = () => {
 
                   {/* Remove Button */}
                   <button
-                    onClick={() => handleRemove(item.id)}
+                    onClick={() => handleRemove(item._id)}
                     className="px-4 py-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 transition-colors duration-200"
                   >
                     Remove
