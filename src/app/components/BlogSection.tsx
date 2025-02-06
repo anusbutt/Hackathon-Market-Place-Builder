@@ -7,7 +7,7 @@ function BlogSection() {
     {
       id: 1,
       img: "/images/sofa4.png",
-      author: "Saber Ali",
+      author: "Anus Butt",
       date: "21 August, 2020",
       title: "Top Essential Trends in 2020",
       description: "More off this less hello samlande lied much over tightly circa horse taped mightly.",
@@ -16,7 +16,7 @@ function BlogSection() {
     {
       id: 2,
       img: "/images/sofa5.png",
-      author: "Surfauxion",
+      author: "Anus Butt",
       date: "21 August, 2020",
       title: "Top Essential Trends in 2020",
       description: "More off this less hello samlande lied much over tightly circa horse taped mightly.",
@@ -25,7 +25,7 @@ function BlogSection() {
     {
       id: 3,
       img: "/images/sofa6.png",
-      author: "Saber Ali",
+      author: "Anus Butt",
       date: "21 August, 2020",
       title: "Top Essential Trends in 2020",
       description: "More off this less hello samlande lied much over tightly circa horse taped mightly.",
