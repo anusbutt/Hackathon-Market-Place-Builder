@@ -61,10 +61,10 @@ const CartPage = () => {
     }
   };
 
-  const handleDecrement = (id: string) => {
-    const product = cartItems.find((item) => item._id === id);
+  const handleDecrement = (_id: string) => {
+    const product = cartItems.find((item) => item._id === _id);
     if (product && product.inventory > 1) {
-      handleQuantityChange(id, product.inventory - 1); // Decrement quantity
+      handleQuantityChange(_id, product.inventory - 1); // Decrement quantity
     }
   };
 
