@@ -102,7 +102,7 @@ const CartPage = () => {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
         {/* Heading */}
         <h1 className="text-4xl font-bold mb-8 text-gray-900 text-center">
